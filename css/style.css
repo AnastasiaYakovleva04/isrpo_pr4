@@ -1,13 +1,13 @@
 body{
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
 }
 
 header{
     background-image: url('../img/header_back.png');
     background-size: cover;
-    height: 90vh;
-    color: white;
+    height: 100vh;
     padding: 0 5%;
 }
 
@@ -20,6 +20,10 @@ a{
     color: white;
     text-decoration: none;
     cursor: pointer;
+}
+a:hover{
+    color: #e7b74b;
+    transition: 0.25s;
 }
 #menu a{
     font-size: 14px;
@@ -54,8 +58,11 @@ button{
     border-radius: 20px;
     font-size: 14px;
     cursor: pointer;
-    color: white;
     background-color: #e7b74b;
+}
+button:hover{
+    color: white;
+    transition: 0.25s;
 }
 .ellips_btn{
     width: 20%;
@@ -67,18 +74,19 @@ button{
     background-color: #3d3d3d;
     border: 1px solid white;
     width: 350px;
+    color: white;
+}
+.stroke_btn:hover{
+    background-color: #e7b74b;
+    color: white;
 }
 .def_btn{
     width: 200px;
     color: #3d3d3d;
 }
 
-.content{
-    height: 300px;
-}
 footer{
     background-color: #3d3d3d;
-    color: white;
     padding: 5%;
 }
 #footer_row{
@@ -100,4 +108,60 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     margin-top: 5%;
+}
+
+
+.content{
+    background-color: #1d1d1d;
+    padding: 5%;
+}
+#tours{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    margin-top: 2.5%;
+    padding-bottom: 5%;
+}
+.tour_cols{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+
+form{
+    display: grid;
+    grid-template: "f s"
+                   "f s"
+                   "b b";
+    grid-template-columns: 2fr 2fr;
+    gap: 40px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2.5%;
+}
+input{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 60px;
+    margin-top: 10px;
+}
+.input1{
+    grid-column-start: 1;
+}
+.input2 {
+    grid-column-start: 2;
+}
+.input3{
+    grid-area: b;
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    height: 60px;
+    width: 95%;
+    margin-top: 10px;
 }
